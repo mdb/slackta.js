@@ -1,0 +1,25 @@
+{
+  "name": "slackta.js",
+  "version": "0.0.1",
+  "description": "A Slack integration that reports your next SEPTA train",
+  "main": "app.js",
+  "scripts": {
+    "test": "node_modules/.bin/mocha"
+  },
+  "keywords": [
+    "slack",
+    "slackbot",
+    "slack integration"
+  ],
+  "author": "Mike Ball",
+  "license": "MIT",
+  "dependencies": {
+    "slack-integrator": "0.0.4",
+    "request": "2.51.0"
+  },
+  "devDependencies": {
+    "mocha": "1.14.x",
+    "supertest": "0.14.x",
+    "nock": "0.51.x"
+  }
+}
