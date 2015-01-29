@@ -14,12 +14,12 @@
   "author": "Mike Ball",
   "license": "MIT",
   "dependencies": {
-    "slack-integrator": "0.0.4",
+    "slack-integrator": "0.0.6",
     "request": "2.51.0"
   },
   "devDependencies": {
     "mocha": "1.14.x",
     "supertest": "0.14.x",
-    "nock": "0.51.x"
+    "nock": "0.58.0"
   }
 }
