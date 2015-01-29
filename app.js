@@ -17,30 +17,29 @@ var slackta = new Integrator({
       if (err || response.statusCode !== 200 || !response.body.length) {
         console.log('Error: ', err);
 
-        callback({
-          username: 'Slackta',
-          channel: req.body.channel_id,
-          icon_emoji: ':septa:',
-          text: 'hiccup'
-        });
+        callback(getPayload(req, 'hiccup'));
 
         return false;
       }
 
-      callback({
-        username: 'Slackta',
-        channel: req.body.channel_id,
-        icon_emoji: ':septa:',
-        text: [
-          '@' + req.body.user_name,
-          ': The next 3 trains to ' + destination + ' from Suburban Station are...\n\n',
-          formatter.format(response.body)
-        ].join('')
-      });
+      callback(getPayload(req, [
+        '@' + req.body.user_name,
+        ': The next 3 trains to ' + destination + ' from Suburban Station are...\n\n',
+        formatter.format(response.body)
+      ].join('')));
     });
   },
 
   hookPath: process.env.INCOMING_SLACK_WEB_HOOK_PATH
 });
+
+function getPayload(req, text) {
+  return {
+    username: 'Slackta',
+    channel: req.body.channel_id,
+    icon_emoji: ':septa:',
+    text: text
+  };
+}
 
 module.exports = slackta;
