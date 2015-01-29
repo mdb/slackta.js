@@ -32,7 +32,8 @@ var slackta = new Integrator({
         channel: req.body.channel_id,
         icon_emoji: ':septa:',
         text: [
-          'The next 3 trains to ' + destination + ' from Suburban Station are...\n\n',
+          '@' + req.body.user_name,
+          ': The next 3 trains to ' + destination + ' from Suburban Station are...\n\n',
           formatter.format(response.body)
         ].join('')
       });
