@@ -18,6 +18,9 @@ var slackta = new Integrator({
         console.log('Error: ', err);
 
         callback({
+          username: 'Slackta',
+          channel: req.body.channel_id,
+          icon_emoji: ':septa:',
           text: 'hiccup'
         });
 
@@ -25,6 +28,9 @@ var slackta = new Integrator({
       }
 
       callback({
+        username: 'Slackta',
+        channel: req.body.channel_id,
+        icon_emoji: ':septa:',
         text: [
           'The next 3 trains to ' + destination + ' from Suburban Station are...\n\n',
           formatter.format(response.body)
