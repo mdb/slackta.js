@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/mdb/slackta.js.svg?branch=master)](https://travis-ci.org/mdb/slackta.js)
+
 # slackta.js
 
 A basic next-to-arrive Slack integration for SEPTA's regional rail lines.
