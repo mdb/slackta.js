@@ -18,7 +18,7 @@
   "author": "Mike Ball",
   "license": "MIT",
   "dependencies": {
-    "slack-integrator": "0.0.6",
+    "slack-integrator": "git://github.com/mdb/slack-integrator#cleanup",
     "request": "2.51.0"
   },
   "devDependencies": {
