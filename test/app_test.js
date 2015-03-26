@@ -16,10 +16,10 @@ describe('GET /', function() {
 describe('POST /integration', function() {
   var slack = nock('https://hooks.slack.com')
                 .post('/services/fakePath', {
-                  username: "Slackta",
-                  channel: "channel id",
-                  icon_emoji: ":septa:",
-                  text:"@user: The next 3 trains to Ardmore from Suburban Station are...\n\noriginal line \n\nDeparture: 1:00\nArrival: 2:00\nDelay: 1\n\nDeparture: 2:00\nArrival: 3:00\nDelay: 2\n\nDeparture: 3:00\nArrival: 4:00\nDelay: 3\n"
+                  username: 'Slackta',
+                  channel: 'channel id',
+                  icon_emoji: ':septa:',
+                  text: '@user: The next 3 trains to Ardmore from Suburban Station are...\n\noriginal line \n\nDeparture: 1:00\nArrival: 2:00\nDelay: 1\n\nDeparture: 2:00\nArrival: 3:00\nDelay: 2\n\nDeparture: 3:00\nArrival: 4:00\nDelay: 3\n'
                 })
                 .reply(200),
       septa = nock('https://septa.p.mashape.com')
